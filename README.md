@@ -1,1 +1,1 @@
-# C-Dili-rnekleri
+# C-Dili-Örnekleri

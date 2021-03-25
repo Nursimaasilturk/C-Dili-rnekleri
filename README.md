@@ -1,5 +1,6 @@
 # C-Dili-Örnekleri
-   
+ 
+ SWİTCH CASE DE ATM DE BANKA İŞLEMİ YAPMA 
    
     #include<stdio.h>
      int main()

@@ -1,0 +1,70 @@
+
+
+İSTEDİĞİN CÜMLEYİ DİLEDİĞİN KADAR BASTIRMA
+İNPUT
+ 
+ başlangıç değeri başta koşul değeri while ın yanına ve işlemelr döngünün içine yapılır...
+    
+    
+    
+    #include<stdio.h>
+    int main(){
+        int  i=0;   // while döngüsünde başlangıç değerini koşul değerini ve arttıma parametresini mutlaka koyman lazım
+          while(i<10){
+        printf("Sima çok zeki bir kızsın\n");
+        i++;
+       }
+           return 0;
+         }
+  
+  OUTPUT
+  
+      Sima çok zeki bir kızsın
+      Sima çok zeki bir kızsın
+      Sima çok zeki bir kızsın
+      Sima çok zeki bir kızsın
+      Sima çok zeki bir kızsın
+      Sima çok zeki bir kızsın
+      Sima çok zeki bir kızsın
+      Sima çok zeki bir kızsın
+      Sima çok zeki bir kızsın
+      Sima çok zeki bir kızsın
+  
+         
+ Faktöriyel Hesaplama
+ 
+       #include<stdio.h>
+       int main(){
+         int n;
+        int fact= 1;
+        printf("hesaplamak istediğiniz sayıyı giriniz:");
+        scanf("%d",&n);
+    
+          while (n != 0){
+        fact = fact*n;
+        n--;
+         }
+         printf("Girdiğiniz sayının faktöriyeli %d'dir\n",fact);
+        return 0;
+    
+     }
+    
+     FİBONACCİ SERİSİ
+     
+        #include<stdio.h>
+     int main(){
+      int sayac,n,t1=0,t2=1,goster=0;
+       printf("KAÇ TERİM YAZILSIN:");
+    scanf("%d",&n);
+    printf("Fibonacci serisi: %d+%d+",t1,t2);
+    sayac=2;
+    while(sayac<n){
+        goster=t1+t2;
+        t1=t2;
+        t2=goster;
+        ++sayac;
+        printf("%d+",goster);
+    }
+    return 0;
+    
+}

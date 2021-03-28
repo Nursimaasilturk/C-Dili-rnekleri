@@ -1,6 +1,7 @@
 # C-Dili-Örnekleri
  
- SWİTCH CASE DE ATM DE BANKA İŞLEMİ YAPMA 
+ SWİTCH CASE 
+ ATM DE BANKA İŞLEMİ YAPMA 
    
     #include<stdio.h>
      int main()
@@ -54,3 +55,50 @@
     return 0;
     
 }
+
+DÖRT İŞLEM
+
+
+      #include<stdio.h>
+       int main(){
+        int islem;
+        int sayi1;
+        int sayi2;
+        int sonuc;
+    printf("Birinci ve ikinci sayıyı giriniz:\n");
+    scanf("%d  %d",&sayi1,&sayi2);
+    printf("İşlemler\n1:Toplama\n2:Çıkarma\n3:Çarpma\n4:Bölme\n");
+    scanf("%d",&islem);
+    
+    switch(islem){
+        case 1:
+            printf("sayılarınız %d ve %d\n",sayi1,sayi2);
+            sonuc = sayi1 + sayi2;
+            printf("İşlemin sonucun %d'dir.\n",sonuc);
+            break;
+        case 2:
+            printf("sayılarınız %d ve %d\n",sayi1,sayi2);
+            sonuc = sayi1 - sayi2;
+            printf("İşlemin sonucun %d'dir.\n",sonuc);
+            break;
+            
+        case 3:
+            printf("sayılarınız %d ve %d\n",sayi1,sayi2);
+            sonuc = sayi1 * sayi2;
+            printf("İşlemin sonucun %d'dir.\n",sonuc);
+            break;
+        case 4:
+            printf("sayılarınız %d ve %d\n",sayi1,sayi2);
+            sonuc = sayi1 % sayi2;
+            printf("İşlemin sonucun %d'dir.\n",sonuc);
+            break;
+            
+        default :
+            printf("bilinmeyen işlem\n");
+            
+    }
+    
+    return 0;
+    
+}
+

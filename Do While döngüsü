@@ -1,0 +1,20 @@
+Hane sayısı ve rakamalrı toplamını bulan do-while döngüsü:
+
+// do ' nun içine işlemler, while'a koşul değeri ve başlangıç değerleri başta verilir.
+
+#include<stdio.h>
+int main(){
+    int a,hane =0,toplam=0;
+    printf("sayı giriniz:");
+    scanf("%d",&a);
+    
+    do{            
+        toplam += (a%10);
+        hane++;
+        a=a/10;
+        }
+    while(a>0);
+    printf("girilen sayının rakamları toplamı %d'dir ve %d hanelidir.",toplam,hane);
+    return 0;
+    
+}

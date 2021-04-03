@@ -190,3 +190,173 @@ eleman         değer
      22          484
      23          529
      24          576
+     
+     
+     40 öğrenciye kafeteryadaki yiyeceklerin kalitesine 1‟den 10‟a kadar bir not vermeleri (1 çok kötü ve 10 mükemmel anlamındadır) söylenmiştir.
+     40 yanıtı bir diziye yerleştirip ve oyların özetini yapan program.
+     
+     INPUT
+     
+     #include<stdio.h>
+     #include<stdlib.h>
+     #include<time.h>
+     #define OGRENCİ_YANITI 40
+     
+    int main(){
+    int ogrenciyanıtı[OGRENCİ_YANITI];
+    int  frekans1=0,frekans2=0,frekans3=0,frekans4=0,frekans5=0,frekans6=0,frekans7=0,frekans8=0,frekans9=0,frekans10=0;
+   
+    int i,oy;
+    srand(time(NULL));
+    printf("Öğrencilerin verdiği oylar : \n");
+           
+    for (i=1;i<=OGRENCİ_YANITI;i++){
+        oy=ogrenciyanıtı[i]=  1+ rand()%10;
+        
+        switch(oy){
+            case 1:
+                ++frekans1;
+                break;
+            case 2:
+                ++frekans2;
+                break;
+            case 3:
+                ++frekans3;
+                break;
+            case 4:
+                ++frekans4;
+                break;
+            case 5:
+                ++frekans5;
+                break;
+            case 6:
+                ++frekans6;
+                break;
+            case 7:
+                ++frekans7;
+                break;
+            case 8:
+                ++frekans8;
+                break;
+            case 9:
+                ++frekans9;
+                break;
+            case 10:
+                ++frekans10;
+                break;
+            default :
+                printf("error");
+        }
+       
+        printf("%d. öğrencinin verdiği oy: %d\n",i,ogrenciyanıtı[i]);
+    }
+    printf("%s%13s\n","Oylama","Frekans");
+    
+   
+    printf("1%15d\n",frekans1);
+    printf("2%15d\n",frekans2);
+    printf("3%15d\n",frekans3);
+    printf("4%15d\n",frekans4);
+    printf("5%15d\n",frekans5);
+    printf("6%15d\n",frekans6);
+    printf("7%15d\n",frekans7);
+    printf("8%15d\n",frekans8);
+    printf("9%15d\n",frekans9);
+    printf("10%15d\n",frekans10);
+    return 0;
+    
+}
+
+OUTPUT
+
+Öğrencilerin verdiği oylar : 
+1. öğrencinin verdiği oy: 3
+2. öğrencinin verdiği oy: 9
+3. öğrencinin verdiği oy: 3
+4. öğrencinin verdiği oy: 3
+5. öğrencinin verdiği oy: 10
+6. öğrencinin verdiği oy: 7
+7. öğrencinin verdiği oy: 8
+8. öğrencinin verdiği oy: 2
+9. öğrencinin verdiği oy: 7
+10. öğrencinin verdiği oy: 7
+11. öğrencinin verdiği oy: 6
+12. öğrencinin verdiği oy: 8
+13. öğrencinin verdiği oy: 1
+14. öğrencinin verdiği oy: 8
+15. öğrencinin verdiği oy: 2
+16. öğrencinin verdiği oy: 3
+17. öğrencinin verdiği oy: 8
+18. öğrencinin verdiği oy: 1
+19. öğrencinin verdiği oy: 10
+20. öğrencinin verdiği oy: 9
+21. öğrencinin verdiği oy: 10
+22. öğrencinin verdiği oy: 1
+23. öğrencinin verdiği oy: 1
+24. öğrencinin verdiği oy: 1
+25. öğrencinin verdiği oy: 6
+26. öğrencinin verdiği oy: 5
+27. öğrencinin verdiği oy: 8
+28. öğrencinin verdiği oy: 8
+29. öğrencinin verdiği oy: 2
+30. öğrencinin verdiği oy: 2
+31. öğrencinin verdiği oy: 2
+32. öğrencinin verdiği oy: 8
+33. öğrencinin verdiği oy: 2
+34. öğrencinin verdiği oy: 9
+35. öğrencinin verdiği oy: 8
+36. öğrencinin verdiği oy: 10
+37. öğrencinin verdiği oy: 4
+38. öğrencinin verdiği oy: 5
+39. öğrencinin verdiği oy: 9
+40. öğrencinin verdiği oy: 2
+ 
+ Oylama      Frekans
+1              5
+2              7
+3              4
+4              1
+5              2
+6              2
+7              3
+8              8
+9              4
+10             4
+     
+
+Dizi tanıplayıp dizinin değerlerini çizgi grafiği şeklinde gösterme
+
+INPUT
+
+#include<stdio.h>
+#define BOYUT 10
+int main(){
+    int t[BOYUT]={1,3,5,12,6,2,7,9,14,5};
+    int i,j;
+     
+    printf("%s  %6s  %13s\n","ELEMAN","DEĞER","GRAFİK");
+    for(i=0;i<BOYUT;i++){
+        printf("%2d%8d              ",i,t[i]);
+        for(j=0;j<t[i];j++){
+            printf("%c",'*');
+        }
+        printf("\n");
+    }
+    return 0;
+}
+
+OUTPUT
+
+ELEMAN  DEĞER        GRAFİK
+ 0       1              *
+ 1       3              ***
+ 2       5              *****
+ 3      12              ************
+ 4       6              ******
+ 5       2              **
+ 6       7              *******
+ 7       9              *********
+ 8      14              **************
+ 9       5              *****
+ 
+ 

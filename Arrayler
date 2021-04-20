@@ -417,3 +417,25 @@ int main(){
 }
 
 
+  kullanıcıdan alınan 5 değeri dizide toplayıp sonra aritmetik ortalamasını alan program
+  
+  include<stdio.h>
+  int main(){
+
+    int toplam = 0;
+    int sayilar[]={};
+    int boyut = 0;
+    int i;
+    printf("dizinin boyutunu giriniz:");
+    scanf("%d",&boyut);
+    printf("dizi------\n");
+   for (i=0;i<boyut;i++){
+       
+       scanf("%d",&sayilar[i]);
+   }
+    for(i=0;i<boyut;i++){
+        toplam += sayilar[i];
+    }
+    printf("girdiğimiz sayıların artimetik ortalaması:%d'dir.",toplam / boyut);
+    return 0;
+}
